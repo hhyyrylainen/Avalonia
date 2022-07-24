@@ -1,11 +1,5 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <Design.PreviewWith>
-    <Border Padding="20">
-      <Button Content="Click Me!" />
-    </Border>
-  </Design.PreviewWith>
-
   <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
     <Setter Property="Background" Value="{DynamicResource ThemeControlMidBrush}" />
     <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderLowBrush}" />

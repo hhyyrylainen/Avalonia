@@ -1,23 +1,6 @@
-<Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <Design.PreviewWith>
-    <Border Padding="20">
-      <StackPanel Spacing="10">
-        <ComboBox PlaceholderText="Select an item">
-          <ComboBoxItem>Item 1</ComboBoxItem>
-          <ComboBoxItem>Item 2</ComboBoxItem>
-        </ComboBox>
-        <ComboBox IsEnabled="False"
-                  Width="200"
-                  SelectedIndex="1"
-                  HorizontalContentAlignment="Center">
-          <ComboBoxItem>Item 1</ComboBoxItem>
-          <ComboBoxItem>Item 2</ComboBoxItem>
-        </ComboBox>
-      </StackPanel>
-    </Border>
-  </Design.PreviewWith>
-  <Style Selector="ComboBox">
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ControlTheme x:Key="{x:Type ComboBox}" TargetType="ComboBox">
     <Setter Property="Background" Value="Transparent" />
     <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}" />
     <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}" />
@@ -70,10 +53,11 @@
                    PlacementTarget="{TemplateBinding}"
                    IsLightDismissEnabled="True">
               <Border Background="{DynamicResource ThemeBackgroundBrush}"
-                      BorderBrush="{DynamicResource ThemeBorderMidBrush}"                      
+                      BorderBrush="{DynamicResource ThemeBorderMidBrush}"
                       BorderThickness="1">
-                <ScrollViewer HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
-                              VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                <ScrollViewer
+                  HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                  VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
                   <ItemsPresenter Name="PART_ItemsPresenter"
                                   Items="{TemplateBinding Items}"
                                   ItemsPanel="{TemplateBinding ItemsPanel}"
@@ -86,11 +70,11 @@
         </Border>
       </ControlTemplate>
     </Setter>
-  </Style>
-  <Style Selector="ComboBox:pointerover /template/ Border#border">
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderHighBrush}" />
-  </Style>
-  <Style Selector="ComboBox:disabled /template/ Border#border">
-    <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}" />
-  </Style>
-</Styles>
+    <Style Selector="^:pointerover /template/ Border#border">
+      <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderHighBrush}" />
+    </Style>
+    <Style Selector="^:disabled /template/ Border#border">
+      <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}" />
+    </Style>
+  </ControlTheme>
+</ResourceDictionary>
