@@ -1,13 +1,20 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="Avalonia.Themes.Default.DefaultTheme">
+  <Styles.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceInclude Source="avares://Avalonia.Themes.Default/Controls/Button.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Styles.Resources>
+  
   <!-- Define ToolTip first so its styles can be overriden by other controls (e.g. TextBox) -->
   <StyleInclude Source="avares://Avalonia.Themes.Default/Controls/ToolTip.xaml"/>
   <!-- PathIcon also needs to be defined early so it can be overriden by other styles (e.g. ComboBox) -->
   <StyleInclude Source="avares://Avalonia.Themes.Default/Controls/PathIcon.xaml" />
   <StyleInclude Source="avares://Avalonia.Themes.Default/Controls/DataValidationErrors.xaml"/>
   <StyleInclude Source="avares://Avalonia.Themes.Default/Controls/FocusAdorner.xaml"/>
-  <StyleInclude Source="avares://Avalonia.Themes.Default/Controls/Button.xaml"/>
   <StyleInclude Source="avares://Avalonia.Themes.Default/Controls/Carousel.xaml"/>
   <StyleInclude Source="avares://Avalonia.Themes.Default/Controls/CheckBox.xaml"/>
   <StyleInclude Source="avares://Avalonia.Themes.Default/Controls/CaptionButtons.xaml"/>
