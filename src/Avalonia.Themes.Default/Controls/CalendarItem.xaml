@@ -5,9 +5,10 @@
 // All other rights reserved.
 -->
 
-<Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <Style Selector="CalendarItem">
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ControlTheme TargetType="CalendarItem"
+                x:Key="{x:Type CalendarItem}">
     <Setter Property="CornerRadius" Value="1" />
     <Setter Property="Template">
       <ControlTemplate>
@@ -146,14 +147,13 @@
                     <ColumnDefinition Width="Auto" />
                   </Grid.ColumnDefinitions>
                 </Grid>
-
               </Grid>
             </Border>
           </Border>
-
-
+          
           <Rectangle Name="DisabledVisual"
                      Stretch="Fill"
+                     IsVisible="False"
                      Fill="{DynamicResource ThemeControlLowBrush}"
                      Opacity="{DynamicResource ThemeDisabledOpacity}"
                      Margin="0,2,0,2" />
@@ -170,15 +170,10 @@
                    VerticalAlignment="Center"
                    Text="{Binding}" />
       </Template>
-
     </Setter>
-  </Style>
 
-  <Style Selector="CalendarItem /template/ Rectangle#DisabledVisual">
-    <Setter Property="IsVisible" Value="False"/>
-  </Style>
-  <Style Selector="CalendarItem:calendardisabled /template/ Rectangle#DisabledVisual">
-    <Setter Property="IsVisible" Value="True"/>
-  </Style>
-  
-</Styles>
+    <Style Selector="^:calendardisabled /template/ Rectangle#DisabledVisual">
+      <Setter Property="IsVisible" Value="True"/>
+    </Style>
+  </ControlTheme>
+</ResourceDictionary>

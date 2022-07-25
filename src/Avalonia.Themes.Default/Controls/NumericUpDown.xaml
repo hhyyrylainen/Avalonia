@@ -1,9 +1,11 @@
-<Styles xmlns="https://github.com/avaloniaui">
-  <Style Selector="NumericUpDown">
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ControlTheme TargetType="NumericUpDown"
+                x:Key="{x:Type NumericUpDown}">
     <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
-    <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}"/>
-    <Setter Property="Padding" Value="4"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}" />
+    <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}" />
+    <Setter Property="Padding" Value="4" />
     <Setter Property="Template">
       <ControlTemplate>
         <ButtonSpinner Name="PART_Spinner"
@@ -18,7 +20,9 @@
                        ButtonSpinnerLocation="{TemplateBinding ButtonSpinnerLocation}">
           <TextBox Name="PART_TextBox"
                    BorderThickness="0"
-                   Background="{TemplateBinding Background}" 
+                   Margin="4"
+                   MinWidth="20"
+                   Background="{TemplateBinding Background}"
                    Padding="{TemplateBinding Padding}"
                    Watermark="{TemplateBinding Watermark}"
                    DataValidationErrors.Errors="{TemplateBinding (DataValidationErrors.Errors)}"
@@ -32,9 +36,5 @@
         </ButtonSpinner>
       </ControlTemplate>
     </Setter>
-  </Style>
-  <Style Selector="NumericUpDown /template/ TextBox#PART_TextBox">
-    <Setter Property="Margin" Value="4"/>
-    <Setter Property="MinWidth" Value="20"/>
-  </Style>
-</Styles>
+  </ControlTheme>
+</ResourceDictionary>

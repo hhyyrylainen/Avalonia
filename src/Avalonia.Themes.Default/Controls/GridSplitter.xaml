@@ -1,6 +1,7 @@
-<Styles xmlns="https://github.com/avaloniaui">
-
-  <Style Selector="GridSplitter">
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ControlTheme TargetType="GridSplitter"
+                x:Key="{x:Type GridSplitter}">
     <Setter Property="Focusable" Value="True" />
     <Setter Property="MinWidth" Value="1" />
     <Setter Property="MinHeight" Value="1" />
@@ -12,13 +13,12 @@
     </Setter>
     <Setter Property="Template">
       <ControlTemplate>
-        <Border 
+        <Border
           BorderBrush="{TemplateBinding BorderBrush}"
           BorderThickness="{TemplateBinding BorderThickness}"
           CornerRadius="{TemplateBinding CornerRadius}"
-          Background="{TemplateBinding Background}"/>
+          Background="{TemplateBinding Background}" />
       </ControlTemplate>
     </Setter>
-  </Style>
-
-</Styles>
+  </ControlTheme>
+</ResourceDictionary>

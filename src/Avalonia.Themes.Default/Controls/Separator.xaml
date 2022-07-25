@@ -1,6 +1,7 @@
-<Styles xmlns="https://github.com/avaloniaui">
-
-  <Style Selector="Separator">
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ControlTheme TargetType="Separator"
+                x:Key="{x:Type Separator}">
     <Setter Property="Focusable" Value="False"/>
     <Setter Property="Template">
       <ControlTemplate>
@@ -10,12 +11,11 @@
                 Background="{TemplateBinding Background}"/>
       </ControlTemplate>
     </Setter>
-  </Style>
+    <!-- <Style Selector="MenuItem > Separator, ContextMenu > Separator"> -->
+    <!--   <Setter Property="Background" Value="{DynamicResource ThemeControlMidBrush}"/> -->
+    <!--   <Setter Property="Margin" Value="29,1,0,1"/> -->
+    <!--   <Setter Property="Height" Value="1"/> -->
+    <!-- </Style> -->
+  </ControlTheme>
 
-  <Style Selector="MenuItem > Separator, ContextMenu > Separator">
-    <Setter Property="Background" Value="{DynamicResource ThemeControlMidBrush}"/>
-    <Setter Property="Margin" Value="29,1,0,1"/>
-    <Setter Property="Height" Value="1"/>
-  </Style>
-
-</Styles>
+</ResourceDictionary>

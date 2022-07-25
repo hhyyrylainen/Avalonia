@@ -65,7 +65,7 @@
               <Border Background="{DynamicResource ThemeBackgroundBrush}"
                       BorderBrush="{DynamicResource ThemeBorderMidBrush}"
                       BorderThickness="{TemplateBinding BorderThickness}">
-                <ScrollViewer Classes="menuscroller">                  
+                <ScrollViewer Theme="{StaticResource DefaultMenuScrollViewerTheme}">                  
                     <ItemsPresenter Name="PART_ItemsPresenter"
                                     Items="{TemplateBinding Items}"
                                     ItemsPanel="{TemplateBinding ItemsPanel}"
@@ -116,7 +116,7 @@
               <Border Background="{DynamicResource ThemeBackgroundBrush}"
                       BorderBrush="{DynamicResource ThemeBorderMidBrush}"
                       BorderThickness="{TemplateBinding BorderThickness}">
-                <ScrollViewer Classes="menuscroller">
+                <ScrollViewer Theme="{StaticResource DefaultMenuScrollViewerTheme}">
                   <ItemsPresenter Name="PART_ItemsPresenter"
                                   Items="{TemplateBinding Items}"
                                   ItemsPanel="{TemplateBinding ItemsPanel}"

@@ -3,7 +3,7 @@
                     xmlns:converters="clr-namespace:Avalonia.Controls.Converters;assembly=Avalonia.Controls"
                     x:CompileBindings="True">
   
-  <ControlTheme x:Key="FluentButtonSpinnerRepeatButton" TargetType="RepeatButton" BasedOn="{StaticResource {x:Type RepeatButton}}">
+  <ControlTheme x:Key="DefaultButtonSpinnerRepeatButton" TargetType="RepeatButton" BasedOn="{StaticResource {x:Type RepeatButton}}">
     <Setter Property="CornerRadius" Value="0"/>
     <Setter Property="MinWidth" Value="34" />
     <Setter Property="VerticalAlignment" Value="Stretch" />
